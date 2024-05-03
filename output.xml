@@ -1,62 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on darwin)" generated="2024-05-03T16:28:16.539688" rpa="false" schemaversion="5">
-<suite id="s1" name="3" source="/Users/bense/Documents/proj/ttb-automated-assignment/3.robot">
-<test id="s1-t1" name="Get user profile success" line="9">
-<kw name="GET" owner="RequestsLibrary">
-<msg time="2024-05-03T16:28:17.245395" level="INFO">GET Request : url=https://reqres.in/api/users/12 
- path_url=/api/users/12 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg time="2024-05-03T16:28:17.247167" level="INFO">GET Response : url=https://reqres.in/api/users/12 
- status=200, reason=OK 
- headers={'Date': 'Fri, 03 May 2024 09:28:17 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1714728497&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=81jMCKpDN0ljvPlWmwSJIRnBhk3oSHl%2FX7bhe5O5M4w%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1714728497&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=81jMCKpDN0ljvPlWmwSJIRnBhk3oSHl%2FX7bhe5O5M4w%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"11c-Y8Nrcu5DO2DrJvfp3zc2PKGiar4"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'MISS', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '87df3850cd2737d6-BKK', 'Content-Encoding': 'gzip'} 
- body={"data":{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"},"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
- </msg>
-<msg time="2024-05-03T16:28:17.247317" level="INFO">${rsp} = &lt;Response [200]&gt;</msg>
+<robot generator="Robot 5.0.1 (Python 3.10.0 on darwin)" generated="20240503 17:27:19.779" rpa="false" schemaversion="3">
+<suite id="s1" name="Ttb-Automated-Assignment" source="/Users/bense/Documents/proj/ttb-automated-assignment">
+<suite id="s1-s1" name="2" source="/Users/bense/Documents/proj/ttb-automated-assignment/2.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>browser=gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240503 17:27:19.868" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
+<msg timestamp="20240503 17:27:21.366" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240503 17:27:21.367" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 119
+Current browser version is 124.0.6367.94 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x00000001025de004 chromedriver + 4169732
+1   chromedriver                        0x00000001025d5ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010222b500 chromedriver + 292096
+3   chromedriver                        0x000000010226195c chromedriver + 514396
+4   chromedriver                        0x0000000102260b98 chromedriver + 510872
+5   chromedriver                        0x000000010225c244 chromedriver + 492100
+6   chromedriver                        0x00000001022595b8 chromedriver + 480696
+7   chromedriver                        0x000000010229b754 chromedriver + 751444
+8   chromedriver                        0x00000001022645e8 chromedriver + 525800
+9   chromedriver                        0x00000001022654b8 chromedriver + 529592
+10  chromedriver                        0x00000001025a4334 chromedriver + 3932980
+11  chromedriver                        0x00000001025a8970 chromedriver + 3950960
+12  chromedriver                        0x000000010258c774 chromedriver + 3835764
+13  chromedriver                        0x00000001025a9478 chromedriver + 3953784
+14  chromedriver                        0x000000010257eab4 chromedriver + 3779252
+15  chromedriver                        0x00000001025c5914 chromedriver + 4069652
+16  chromedriver                        0x00000001025c5a90 chromedriver + 4070032
+17  chromedriver                        0x00000001025d5c70 chromedriver + 4136048
+18  libsystem_pthread.dylib             0x0000000182932f94 _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000018292dd34 thread_start + 8
+</msg>
+<status status="FAIL" starttime="20240503 17:27:19.868" endtime="20240503 17:27:21.369"/>
+</kw>
+<test id="s1-s1-t1" name="Login success" line="15">
+<status status="FAIL" starttime="20240503 17:27:21.370" endtime="20240503 17:27:21.370">Parent suite setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 119
+Current browser version is 124.0.6367.94 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x00000001025de004 chromedriver + 4169732
+1   chromedriver                        0x00000001025d5ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010222b500 chromedriver + 292096
+3   chromedriver                        0x000000010226195c chromedriver + 514396
+4   chromedriver                        0x0000000102260b98 chromedriver + 510872
+5   chromedriver                        0x000000010225c244 chromedriver + 492100
+6   chromedriver                        0x00000001022595b8 chromedriver + 480696
+7   chromedriver                        0x000000010229b754 chromedriver + 7...
+    [ Message content over the limit has been removed. ]
+...hromedriver                        0x00000001022654b8 chromedriver + 529592
+10  chromedriver                        0x00000001025a4334 chromedriver + 3932980
+11  chromedriver                        0x00000001025a8970 chromedriver + 3950960
+12  chromedriver                        0x000000010258c774 chromedriver + 3835764
+13  chromedriver                        0x00000001025a9478 chromedriver + 3953784
+14  chromedriver                        0x000000010257eab4 chromedriver + 3779252
+15  chromedriver                        0x00000001025c5914 chromedriver + 4069652
+16  chromedriver                        0x00000001025c5a90 chromedriver + 4070032
+17  chromedriver                        0x00000001025d5c70 chromedriver + 4136048
+18  libsystem_pthread.dylib             0x0000000182932f94 _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000018292dd34 thread_start + 8</status>
+</test>
+<test id="s1-s1-t2" name="Login failed - Password incorrect" line="24">
+<status status="FAIL" starttime="20240503 17:27:21.371" endtime="20240503 17:27:21.371">Parent suite setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 119
+Current browser version is 124.0.6367.94 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x00000001025de004 chromedriver + 4169732
+1   chromedriver                        0x00000001025d5ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010222b500 chromedriver + 292096
+3   chromedriver                        0x000000010226195c chromedriver + 514396
+4   chromedriver                        0x0000000102260b98 chromedriver + 510872
+5   chromedriver                        0x000000010225c244 chromedriver + 492100
+6   chromedriver                        0x00000001022595b8 chromedriver + 480696
+7   chromedriver                        0x000000010229b754 chromedriver + 7...
+    [ Message content over the limit has been removed. ]
+...hromedriver                        0x00000001022654b8 chromedriver + 529592
+10  chromedriver                        0x00000001025a4334 chromedriver + 3932980
+11  chromedriver                        0x00000001025a8970 chromedriver + 3950960
+12  chromedriver                        0x000000010258c774 chromedriver + 3835764
+13  chromedriver                        0x00000001025a9478 chromedriver + 3953784
+14  chromedriver                        0x000000010257eab4 chromedriver + 3779252
+15  chromedriver                        0x00000001025c5914 chromedriver + 4069652
+16  chromedriver                        0x00000001025c5a90 chromedriver + 4070032
+17  chromedriver                        0x00000001025d5c70 chromedriver + 4136048
+18  libsystem_pthread.dylib             0x0000000182932f94 _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000018292dd34 thread_start + 8</status>
+</test>
+<test id="s1-s1-t3" name="Login failed - Username not found" line="31">
+<status status="FAIL" starttime="20240503 17:27:21.371" endtime="20240503 17:27:21.371">Parent suite setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 119
+Current browser version is 124.0.6367.94 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x00000001025de004 chromedriver + 4169732
+1   chromedriver                        0x00000001025d5ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010222b500 chromedriver + 292096
+3   chromedriver                        0x000000010226195c chromedriver + 514396
+4   chromedriver                        0x0000000102260b98 chromedriver + 510872
+5   chromedriver                        0x000000010225c244 chromedriver + 492100
+6   chromedriver                        0x00000001022595b8 chromedriver + 480696
+7   chromedriver                        0x000000010229b754 chromedriver + 7...
+    [ Message content over the limit has been removed. ]
+...hromedriver                        0x00000001022654b8 chromedriver + 529592
+10  chromedriver                        0x00000001025a4334 chromedriver + 3932980
+11  chromedriver                        0x00000001025a8970 chromedriver + 3950960
+12  chromedriver                        0x000000010258c774 chromedriver + 3835764
+13  chromedriver                        0x00000001025a9478 chromedriver + 3953784
+14  chromedriver                        0x000000010257eab4 chromedriver + 3779252
+15  chromedriver                        0x00000001025c5914 chromedriver + 4069652
+16  chromedriver                        0x00000001025c5a90 chromedriver + 4070032
+17  chromedriver                        0x00000001025d5c70 chromedriver + 4136048
+18  libsystem_pthread.dylib             0x0000000182932f94 _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000018292dd34 thread_start + 8</status>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20240503 17:27:21.372" endtime="20240503 17:27:21.372"/>
+</kw>
+<status status="FAIL" starttime="20240503 17:27:19.789" endtime="20240503 17:27:21.372">Suite setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 119
+Current browser version is 124.0.6367.94 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x00000001025de004 chromedriver + 4169732
+1   chromedriver                        0x00000001025d5ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010222b500 chromedriver + 292096
+3   chromedriver                        0x000000010226195c chromedriver + 514396
+4   chromedriver                        0x0000000102260b98 chromedriver + 510872
+5   chromedriver                        0x000000010225c244 chromedriver + 492100
+6   chromedriver                        0x00000001022595b8 chromedriver + 480696
+7   chromedriver                        0x000000010229b754 chromedriver + 7...
+    [ Message content over the limit has been removed. ]
+...hromedriver                        0x00000001022654b8 chromedriver + 529592
+10  chromedriver                        0x00000001025a4334 chromedriver + 3932980
+11  chromedriver                        0x00000001025a8970 chromedriver + 3950960
+12  chromedriver                        0x000000010258c774 chromedriver + 3835764
+13  chromedriver                        0x00000001025a9478 chromedriver + 3953784
+14  chromedriver                        0x000000010257eab4 chromedriver + 3779252
+15  chromedriver                        0x00000001025c5914 chromedriver + 4069652
+16  chromedriver                        0x00000001025c5a90 chromedriver + 4070032
+17  chromedriver                        0x00000001025d5c70 chromedriver + 4136048
+18  libsystem_pthread.dylib             0x0000000182932f94 _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000018292dd34 thread_start + 8</status>
+</suite>
+<suite id="s1-s2" name="3" source="/Users/bense/Documents/proj/ttb-automated-assignment/3.robot">
+<test id="s1-s2-t1" name="Get user profile success" line="9">
+<kw name="GET" library="RequestsLibrary">
 <var>${rsp}</var>
 <arg>https://reqres.in/api/users/12</arg>
 <arg>expected_status=200</arg>
 <doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-05-03T16:28:16.587540" elapsed="0.659828"/>
+<msg timestamp="20240503 17:27:21.458" level="INFO">GET Request : url=https://reqres.in/api/users/12 
+ path_url=/api/users/12 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20240503 17:27:21.458" level="INFO">GET Response : url=https://reqres.in/api/users/12 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 03 May 2024 10:27:21 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1714728497&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=81jMCKpDN0ljvPlWmwSJIRnBhk3oSHl%2FX7bhe5O5M4w%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1714728497&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=81jMCKpDN0ljvPlWmwSJIRnBhk3oSHl%2FX7bhe5O5M4w%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"11c-Y8Nrcu5DO2DrJvfp3zc2PKGiar4"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '3544', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '87df8edb1f2126d9-BKK', 'Content-Encoding': 'gzip'} 
+ body={"data":{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"},"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
+ </msg>
+<msg timestamp="20240503 17:27:21.458" level="INFO">${rsp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240503 17:27:21.397" endtime="20240503 17:27:21.458"/>
 </kw>
-<kw name="Should Be True" owner="BuiltIn">
+<kw name="Should Be True" library="BuiltIn">
 <arg>${rsp.json()}[data][id] == 12</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-05-03T16:28:17.247558" elapsed="0.000648"/>
+<status status="PASS" starttime="20240503 17:27:21.458" endtime="20240503 17:27:21.459"/>
 </kw>
-<kw name="Should Be True" owner="BuiltIn">
+<kw name="Should Be True" library="BuiltIn">
 <arg>'${rsp.json()}[data][email]' == 'rachel.howell@reqres.in'</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-05-03T16:28:17.248389" elapsed="0.000508"/>
+<status status="PASS" starttime="20240503 17:27:21.459" endtime="20240503 17:27:21.459"/>
 </kw>
-<kw name="Should Be True" owner="BuiltIn">
+<kw name="Should Be True" library="BuiltIn">
 <arg>'${rsp.json()}[data][first_name]' == 'Rachel'</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-05-03T16:28:17.249053" elapsed="0.000438"/>
+<status status="PASS" starttime="20240503 17:27:21.459" endtime="20240503 17:27:21.460"/>
 </kw>
-<kw name="Should Be True" owner="BuiltIn">
+<kw name="Should Be True" library="BuiltIn">
 <arg>'${rsp.json()}[data][last_name]' == 'Howell'</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-05-03T16:28:17.249617" elapsed="0.000493"/>
+<status status="PASS" starttime="20240503 17:27:21.460" endtime="20240503 17:27:21.461"/>
 </kw>
-<kw name="Should Be True" owner="BuiltIn">
+<kw name="Should Be True" library="BuiltIn">
 <arg>'${rsp.json()}[data][avatar]' == 'https://reqres.in/img/faces/12-image.jpg'</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-05-03T16:28:17.250227" elapsed="0.000402"/>
+<status status="PASS" starttime="20240503 17:27:21.461" endtime="20240503 17:27:21.461"/>
 </kw>
-<status status="PASS" start="2024-05-03T16:28:16.587128" elapsed="0.663651"/>
+<status status="PASS" starttime="20240503 17:27:21.397" endtime="20240503 17:27:21.461"/>
 </test>
-<status status="PASS" start="2024-05-03T16:28:16.544266" elapsed="0.707004"/>
+<test id="s1-s2-t2" name="Get user profile but user not found" line="17">
+<kw name="GET" library="RequestsLibrary">
+<var>${rsp}</var>
+<arg>https://reqres.in/api/users/1234</arg>
+<arg>expected_status=404</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20240503 17:27:22.208" level="INFO">GET Request : url=https://reqres.in/api/users/1234 
+ path_url=/api/users/1234 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20240503 17:27:22.208" level="INFO">GET Response : url=https://reqres.in/api/users/1234 
+ status=404, reason=Not Found 
+ headers={'Date': 'Fri, 03 May 2024 10:27:22 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1714732042&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=Xl1HokavH%2BYYcpWth61JqX%2BFk78qIvscOQB7wqR7y24%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1714732042&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=Xl1HokavH%2BYYcpWth61JqX%2BFk78qIvscOQB7wqR7y24%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'EXPIRED', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '87df8edb8f46272d-BKK'} 
+ body={} 
+ </msg>
+<msg timestamp="20240503 17:27:22.209" level="INFO">${rsp} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20240503 17:27:21.462" endtime="20240503 17:27:22.209"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>'${rsp.json()}' == '{}'</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20240503 17:27:22.209" endtime="20240503 17:27:22.213"/>
+</kw>
+<status status="PASS" starttime="20240503 17:27:21.462" endtime="20240503 17:27:22.214"/>
+</test>
+<status status="PASS" starttime="20240503 17:27:21.373" endtime="20240503 17:27:22.214"/>
+</suite>
+<status status="FAIL" starttime="20240503 17:27:19.780" endtime="20240503 17:27:22.217"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="3" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="3">3</stat>
+<stat pass="2" fail="3" skip="0" id="s1" name="Ttb-Automated-Assignment">Ttb-Automated-Assignment</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s1" name="2">Ttb-Automated-Assignment.2</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s2" name="3">Ttb-Automated-Assignment.3</stat>
 </suite>
 </statistics>
 <errors>
