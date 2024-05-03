@@ -8,7 +8,8 @@ pipeline {
         }
         stage('Run Test Automate') {
             steps {
-                sh 'python -m venv .venv'
+                sh 'cd ttb-automated-assignment'
+                sh 'source .venv/bin/activate'
                 sh 'pip install -r requirement.txt'
                 sh 'robot -d results 3.robot'
             }
@@ -17,6 +18,16 @@ pipeline {
             steps {
                 archiveArtifacts artifacts: './results', followSymlinks: false
             }
+        }
+    }
+    post{
+        success{
+            sh 'cd ..'
+            sh 'rm -rf ttb-automated-assignment'
+        }
+        failure{
+            sh 'cd ..'
+            sh 'rm -rf ttb-automated-assignment'
         }
     }
 }
