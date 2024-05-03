@@ -13,6 +13,7 @@ pipeline {
                 // sh 'source .venv/bin/activate'
                 sh 'pip install -r requirement.txt'
                 sh 'robot -d results 3.robot'
+                sh 'ls'
             }
         }
         stage('Send Result To Jenkins') {
