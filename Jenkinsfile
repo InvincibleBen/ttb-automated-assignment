@@ -9,6 +9,7 @@ pipeline {
         stage('Run Test Automate') {
             steps {
                 sh 'python -m venv .venv'
+                sh 'pip install -r requirement.txt'
                 sh 'robot -d results 3.robot'
             }
         }
