@@ -1,13 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout Code From Git') {
-            steps {
-                sh 'git clone https://github.com/InvincibleBen/ttb-automated-assignment.git'
-            }
-        }
+        // stage('Checkout Code From Git') {
+        //     steps {
+        //         sh 'git clone https://github.com/InvincibleBen/ttb-automated-assignment.git'
+        //     }
+        // }
         stage('Run Test Automate') {
             steps {
+                sh 'ls'
                 sh 'cd ttb-automated-assignment'
                 sh 'source .venv/bin/activate'
                 sh 'pip install -r requirement.txt'
