@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Send Result To Jenkins') {
             steps {
-                archiveArtifacts artifacts: './results', followSymlinks: false
+                archiveArtifacts artifacts: 'results', followSymlinks: false
             }
         }
     }
