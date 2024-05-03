@@ -4,7 +4,7 @@ pipeline {
         stage('Run Test Automate') {
             steps {
                 sh 'source .venv/bin/activate'
-                sh 'pip install -r requirement.txt'
+                // sh 'pip install -r requirement.txt'
                 sh 'robot -d results 3.robot'
             }
         }
