@@ -1,4 +1,4 @@
-#!/Users/bense/Documents/proj/ttb-automated-assignment/.venv/bin/python
+#!/Users/thapakorn/Documents/repo/ttb-automated-assignment/.venv/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys
