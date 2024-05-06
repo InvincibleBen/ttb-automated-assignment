@@ -1,3 +1,5 @@
+# 3. Create automation script using your preferred programming language for test Rest API GET request.
+
 *** Settings ***
 Library  RequestsLibrary
 

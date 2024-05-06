@@ -1,3 +1,5 @@
+# 2. Create automation script to test website ‘http://the-internet.herokuapp.com/login’ following test cases in table below. You can use your preferred programming language.
+
 *** Settings ***
 Library  SeleniumLibrary  timeout=10  implicit_wait=10
 Suite Setup  Open Browser  browser=gc
