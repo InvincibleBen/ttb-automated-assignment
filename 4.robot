@@ -21,7 +21,7 @@ ${reminder_date_ok}  id=com.avjindersinghsekhon.minimaltodo:id/ok
 
 *** Keywords ***
 launch application
-    Open Application  remote_url=http://127.0.0.1:4723/wd/hub  platformName=Android  automationName=uiautomator2  deviceName=emulator-5554  app=/Users/thapakorn/Documents/repo/ttb-automated-assignment/apk/app-release.apk  noReset=false
+    Open Application  remote_url=http://127.0.0.1:4723  platformName=Android  automationName=uiautomator2  deviceName=emulator-5554  app=/Users/thapakorn/Documents/repo/ttb-automated-assignment/apk/app-release.apk  noReset=false
     Click Element  ${skip_update_ok}
 
 *** Test Cases ***
