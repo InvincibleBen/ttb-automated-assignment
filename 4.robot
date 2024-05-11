@@ -2,7 +2,7 @@
 # Please prepare test cases and create automation test scripts to cover the features.
 
 *** Settings ***
-Library  AppiumLibrary  timeout=10
+Library  AppiumLibrary  timeout=5
 Suite Setup  launch application
 Suite Teardown  Close All Applications
 
@@ -21,8 +21,8 @@ ${reminder_date_ok}  id=com.avjindersinghsekhon.minimaltodo:id/ok
 
 *** Keywords ***
 launch application
-    Open Application  remote_url=http://127.0.0.1:4723  platformName=Android  automationName=uiautomator2  deviceName=emulator-5554  app=/Users/thapakorn/Documents/repo/ttb-automated-assignment/apk/app-release.apk  noReset=false
-    Click Element  ${skip_update_ok}
+    Open Application  remote_url=http://127.0.0.1:4723/wd/hub  platformName=Android  automationName=uiautomator2  deviceName=emulator-5554  app=${CURDIR}/apk/app-release.apk  noReset=false
+    Run Keyword And Ignore Error  Click Element  ${skip_update_ok}
 
 *** Test Cases ***
 create todo without reminder
