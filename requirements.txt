@@ -1,4 +1,5 @@
 robotframework==7.0
 robotframework-seleniumlibrary==6.3.0
 robotframework-requests==0.9.7
+robotframework-appiumlibrary==2.0.0
 Appium-Python-Client<4.0.0
